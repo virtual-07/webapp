@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background: #e0c3ba;
+    font-style: normal;
+    
+}
+
+nav {
+    
+    
+    min-height: 10vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #E43F6F;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav ul button{
+
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    color: #373F51;
+    background: #db2f60;
+    border: none;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    
+
+}
+nav ul button:focus{
+
+    outline: 0;
+    background: #bd2852;
+
+
+}
+
+.landing{
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+    
+
+    
+
+}
+
+.landing h2{
+    font-size: 7rem;
+    color: #008DD5;
+    margin-left: 4.4rem;
+    
+}
+
+.landing h3{
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #2fa3dd;
+    margin-left: 4.4rem;
+}
+
+.landing button{
+    margin-top: 3rem;
+    padding: 1.5rem 3rem;
+    font-size: 1.6rem;
+    border: none;
+    background: #E43F6F;
+    color: white;
+    margin-left: 4.4rem;
+    
+}
+.landing button:focus{
+    outline: 0;
+    background: #db2f60;
+}
+.landing button:hover{
+    background: #e45980;
+    transition: 1s;
+
+}
