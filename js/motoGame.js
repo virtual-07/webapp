@@ -112,6 +112,11 @@ window.addEventListener("keydown", (e) => {
         console.log("Enter Detected!");
         player.draw();
         console.log(imgPath)
+
+        if(imgPath === "../images/motogame/afkMode.png"){
+            imgPath = "../images/motogame/moto.png"
+        }
+
     }
 })
 
