@@ -13,12 +13,16 @@ body{
 nav {
     
     
-    min-height: 10vh;
+    min-height: 5vh;
+    height: 12vh;
     margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background: #E43F6F;
+}
+.logo{
+    margin: 10vh 10vh;
 }
 
 nav ul{
