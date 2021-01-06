@@ -2,6 +2,8 @@ var c = document.createElement("canvas");
 var ctx = c.getContext("2d");
 c.width = window.innerWidth; c.height = window.innerHeight * 0.6;
 document.body.appendChild(c);
+var afk = false;
+var imgPath = "../images/motogame/moto.png"
 
 var perm = [];
 while (perm.length < 255) {
@@ -16,6 +18,12 @@ var noise = x => {
 }
 
 var player = new function() {
+
+    this.create = function()
+    {
+        this.img.src = imgPath;
+        
+    }
     this.x = c.width/2;
     this.y = 0;
     this.ySpeed = 0;
@@ -23,7 +31,9 @@ var player = new function() {
     this.rSpeed = 0;
 
     this.img = new Image();
-    this.img.src = "images/motogame/moto.png";
+
+
+
     this.draw = function() {
         var p1 =  c.height - noise(t + this.x) * 0.45;
         var p2 =  c.height - noise(t + this.x) * 0.45;
@@ -86,12 +96,23 @@ var loop = () => {
     }
     ctx.lineTo(c.width, c.height);
     ctx.fill();
-
+    player.create();
     player.draw();
     requestAnimationFrame(loop);
 }
 
 onkeydown = d => k[d.key] = 1;
 onkeyup = d => k[d.key] = 0;
+
+
+window.addEventListener("keydown", (e) => {
+    if(e.keyCode === 13) 
+    {
+        imgPath = "../images/motogame/afkMode.png"
+        console.log("Enter Detected!");
+        player.draw();
+        console.log(imgPath)
+    }
+})
 
 loop();
