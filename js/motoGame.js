@@ -108,14 +108,17 @@ onkeyup = d => k[d.key] = 0;
 window.addEventListener("keydown", (e) => {
     if(e.keyCode === 13) 
     {
-        imgPath = "../images/motogame/afkMode.png"
-        console.log("Enter Detected!");
-        player.draw();
-        console.log(imgPath)
-
         if(imgPath === "../images/motogame/afkMode.png"){
             imgPath = "../images/motogame/moto.png"
         }
+        else if(imgPath === "../images/motogame/moto.png"){
+            imgPath = "../images/motogame/afkMode.png"
+            
+        }
+        console.log("Enter Detected!");
+        player.draw();
+        console.log(imgPath)
+        player.create();
 
     }
 })
